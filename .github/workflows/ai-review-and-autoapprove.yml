@@ -50,7 +50,7 @@ jobs:
         run: sleep 300  # 5分待ち（必要に応じて調整）
 
       - name: PR を承認
-        uses: peter-evans/approve-pull-request@v3
+        uses: peter-evans/approve-pull-request@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.get_pr.outputs.pr_number }}
